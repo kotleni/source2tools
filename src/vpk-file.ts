@@ -39,8 +39,6 @@ export class VPKFile {
             process.exit(1);
         }
 
-        console.log('header =', this.header);
-
         this._entries = []; // Reset
 
         // Types

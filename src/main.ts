@@ -1,10 +1,6 @@
-import {BufferedReader} from "./buffered-reader.js";
 import * as process from "node:process";
 import * as console from "node:console";
 import {Command} from '@commander-js/extra-typings';
-import type {VPKHeader} from "./entities/vpk-header.js";
-import {VPK_MAGIC, VPK_SUPPORTED_VERSION} from "./constants.js";
-import type {PackageEntry} from "./entities/package-entry.js";
 import {VPKFile} from "./vpk-file.js";
 
 const program = new Command()
