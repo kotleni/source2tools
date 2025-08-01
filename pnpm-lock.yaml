@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@commander-js/extra-typings':
+        specifier: github:commander-js/extra-typings
+        version: https://codeload.github.com/commander-js/extra-typings/tar.gz/dc825b19143378e0c7b1e7f84f937839edbe9ab5(commander@14.0.0)
       '@types/node':
         specifier: ^24.1.0
         version: 24.1.0
+      commander:
+        specifier: ^14.0.0
+        version: 14.0.0
       tsx:
         specifier: ^4.20.3
         version: 4.20.3
@@ -20,6 +26,12 @@ importers:
         version: 5.9.2
 
 packages:
+
+  '@commander-js/extra-typings@https://codeload.github.com/commander-js/extra-typings/tar.gz/dc825b19143378e0c7b1e7f84f937839edbe9ab5':
+    resolution: {tarball: https://codeload.github.com/commander-js/extra-typings/tar.gz/dc825b19143378e0c7b1e7f84f937839edbe9ab5}
+    version: 14.0.0
+    peerDependencies:
+      commander: ~14.0.0
 
   '@esbuild/aix-ppc64@0.25.8':
     resolution: {integrity: sha512-urAvrUedIqEiFR3FYSLTWQgLu5tb+m0qZw0NBEasUeo6wuqatkMDaRT+1uABiGXEu5vqgPd7FGE1BhsAIy9QVA==}
@@ -180,6 +192,10 @@ packages:
   '@types/node@24.1.0':
     resolution: {integrity: sha512-ut5FthK5moxFKH2T1CUOC6ctR67rQRvvHdFLCD2Ql6KXmMuCrjsSsRI9UsLCm9M18BMwClv4pn327UvB7eeO1w==}
 
+  commander@14.0.0:
+    resolution: {integrity: sha512-2uM9rYjPvyq39NwLRqaiLtWHyDC1FvryJDa2ATTVims5YAS4PupsEQsDvP14FqhFr0P49CYDugi59xaxJlTXRA==}
+    engines: {node: '>=20'}
+
   esbuild@0.25.8:
     resolution: {integrity: sha512-vVC0USHGtMi8+R4Kz8rt6JhEWLxsv9Rnu/lGYbPR8u47B+DCBksq9JarW0zOO7bs37hyOK1l2/oqtbciutL5+Q==}
     engines: {node: '>=18'}
@@ -210,6 +226,10 @@ packages:
     resolution: {integrity: sha512-9UJ2xGDvQ43tYyVMpuHlsgApydB8ZKfVYTsLDhXkFL/6gfkp+U8xTGdh8pMJv1SpZna0zxG1DwsKZsreLbXBxw==}
 
 snapshots:
+
+  '@commander-js/extra-typings@https://codeload.github.com/commander-js/extra-typings/tar.gz/dc825b19143378e0c7b1e7f84f937839edbe9ab5(commander@14.0.0)':
+    dependencies:
+      commander: 14.0.0
 
   '@esbuild/aix-ppc64@0.25.8':
     optional: true
@@ -292,6 +312,8 @@ snapshots:
   '@types/node@24.1.0':
     dependencies:
       undici-types: 7.8.0
+
+  commander@14.0.0: {}
 
   esbuild@0.25.8:
     optionalDependencies:
