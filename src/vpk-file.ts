@@ -18,6 +18,11 @@ export class VPKFile {
     get header() { return this._header; }
     get entries(): PackageEntry[] { return this._entries; }
 
+    getArchiveFilePathByIndex(index: number): string {
+        const pathStart = this.filePath.substring(0, this.filePath.lastIndexOf("_"));
+        return `${pathStart}_${index}.vpk`;
+    }
+
     load() {
         this._header = {
             magic: this.reader.readUInt32LE(),

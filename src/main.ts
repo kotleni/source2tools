@@ -25,6 +25,7 @@ switch (modeName) {
         console.log('Entries: ');
         vpkFile.entries.forEach(entry => {
            console.log(`${entry.directoryName}/${entry.fileName}.${entry.typeName}`);
+           console.log(` \\ from archive ${vpkFile.getArchiveFilePathByIndex(entry.archiveIndex)}`)
         });
         break;
 }
