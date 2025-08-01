@@ -1,0 +1,21 @@
+{
+  "name": "source2tool",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "src/main.ts",
+  "scripts": {
+    "dev": "tsx --watch src/main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.13.1",
+  "dependencies": {
+    "@types/node": "^24.1.0",
+    "tsx": "^4.20.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
