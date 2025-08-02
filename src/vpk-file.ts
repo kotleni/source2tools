@@ -23,6 +23,23 @@ export class VPKFile {
         return `${pathStart}_${index}.vpk`;
     }
 
+    readFile(entry: PackageEntry): Buffer | undefined {
+        const filePath = this.getArchiveFilePathByIndex(entry.archiveIndex);
+        // TODO: Merge with smallData
+        if(entry.smallData) {
+            console.log('Error, reading files with small data block not implemented yet.');
+            process.exit(1);
+        }
+
+        if(entry.length > 0) {
+            const reader = new BufferedReader(filePath);
+            reader.seek(entry.offset);
+            return reader.readBytes(entry.length);
+        }
+
+        return undefined;
+    }
+
     load() {
         this._header = {
             magic: this.reader.readUInt32LE(),
